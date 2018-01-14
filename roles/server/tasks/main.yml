@@ -1,0 +1,9 @@
+---
+# tasks file for server
+- name: Atualiza o cache apt de nosso servidor
+  apt: update_cache=yes cache_valid_time=3600
+- name: Instala os pacotes necessarios
+  apt: name={{ item }} state=present
+  with_items:
+  - python3.5-dev
+  - postgresql-9.5 

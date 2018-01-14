@@ -1,0 +1,8 @@
+---
+# defaults file for postgresql
+# nome do banco de dados da aplicacao
+odoo_db: odoo
+# login a ser criado para a aplicacao
+odoo_user: cahbecker
+# senha a ser atribuida para o login da aplicacao
+odoo_password: password

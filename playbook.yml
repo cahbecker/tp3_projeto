@@ -1,0 +1,8 @@
+- hosts: odoo
+  remote_user: cahbecker
+  become: yes
+  roles:
+  - server
+  - python
+  - postgresql
+  - odoo

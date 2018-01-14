@@ -1,0 +1,13 @@
+---
+# tasks file for postgresql
+
+- name: Cria o banco de dados para o Odoo
+  postgresql_db: name={{ odoo_db }} state=present
+  become: true 
+  become_user: postgres
+
+- name: Cria o usuário para o banco de dados
+  postgresql_user: 
+    name={{ odoo_user }}
+    password={{ odoo_password }} 
+  become_user: postgres
